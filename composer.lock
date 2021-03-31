@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "acc5a6e0f7252ba7008dd3e78ecf6abe",
+    "packages": [
+        {
+            "name": "yuns/framework",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sirzhangsai/src.git",
+                "reference": "cba153f568b9bcd55d0776821d4c8537d90f96b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sirzhangsai/src/zipball/cba153f568b9bcd55d0776821d4c8537d90f96b2",
+                "reference": "cba153f568b9bcd55d0776821d4c8537d90f96b2",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "framework",
+            "autoload": {
+                "files": [
+                    "src/yuns.common.php",
+                    "src/yuns.const.php"
+                ],
+                "psr-4": {
+                    "yuns\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "finsh",
+                    "email": "zhangs_zqu@163.com"
+                }
+            ],
+            "description": "Learn PHP ",
+            "homepage": "https://github.com/sirzhangsai/src",
+            "keywords": [
+                "yuns"
+            ],
+            "time": "2018-09-10T10:29:39+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

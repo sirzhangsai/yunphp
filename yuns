@@ -1,0 +1,44 @@
+#!/usr/bin/env php
+<?php
+
+function commandHandle()
+{
+    global $argv;
+
+    if (isset($argv[1])) {
+
+        $commndTag = $argv[1];
+        switch($commndTag) {
+
+            case 'start':
+                startServer();
+            break;
+            case "stop":
+            break;
+        }
+    }
+
+}
+
+function startServer()
+{
+    echo "--------------------------------------yuns--------------------------\n";
+    echo PHP_VERSION.PHP_EOL;
+    echo "服务开启\n";
+    echo "服务链接地址0.0.0.0\n";
+    echo "端口号9501\n";
+
+    //定义框架路径
+    define('APP_FRAME_PATH',__DIR__.'/vendor/yuns/framework/src/');
+    define('APP_ROOT',__DIR__);
+    $server = new swoole_http_server('0.0.0.0', 9501);
+
+    $server->on('request', function ($request, $response) use($server) {
+       //$request->server;
+        //var_dump(APP_FRAME_PATH);
+        require_once __DIR__.'/vendor/yuns/framework/src/Yuns.class.php';
+        Yuns::run();
+    });
+    $server->start();
+}
+commandHandle();
